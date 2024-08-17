@@ -4,7 +4,7 @@ struct Formatter {
 
 impl Formatter {
     fn format(self) -> String {
-        todo!()
+        self.code
     }
 
     pub fn new(code: String, _args: FormatterArguments) -> Self {
