@@ -18,7 +18,7 @@
         cargoArtifacts = craneLib.buildDepsOnly {
           inherit src;
         };
-        lfrs = craneLib.buildPackage {
+        lfmt = craneLib.buildPackage {
           inherit src cargoArtifacts;
           strictDeps = true;
 
@@ -47,7 +47,7 @@
       {
         formatter = treefmtEval.config.build.wrapper;
 
-        packages.default = lfrs;
+        packages.default = lfmt;
         packages.doc = cargo-doc;
         packages.llvm-cov = llvm-cov;
         packages.llvm-cov-text = llvm-cov-text;
@@ -57,7 +57,7 @@
         };
 
         checks = {
-          inherit lfrs cargo-clippy cargo-doc llvm-cov llvm-cov-text;
+          inherit lfmt cargo-clippy cargo-doc llvm-cov llvm-cov-text;
           formatting = treefmtEval.config.build.check self;
         };
 
