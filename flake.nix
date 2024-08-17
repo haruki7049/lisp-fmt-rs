@@ -64,6 +64,7 @@
         devShells.default = pkgs.mkShell {
           packages = [
             rust
+            pkgs.nil
           ];
 
           shellHook = ''
