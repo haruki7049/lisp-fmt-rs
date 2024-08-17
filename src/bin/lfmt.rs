@@ -3,11 +3,11 @@ use clap::Parser;
 fn main() {
     let args: CommandLineArgs = CommandLineArgs::parse();
 
-    if args.verbose == true {
+    if args.verbose {
         eprintln!("This verbose option is not implemented yet...");
         todo!();
     }
-    if args.inplace == true {
+    if args.inplace {
         eprintln!("This inplace option is not implemented yet...");
         todo!();
     }
@@ -27,11 +27,11 @@ fn main() {
         eprintln!("This offset option is not implemented yet...");
         todo!();
     }
-    if args.output_replacements_xml == true {
+    if args.output_replacements_xml {
         eprintln!("This output_replacements_xml option is not implemented yet...");
         todo!();
     }
-    if args.sort_includes == true {
+    if args.sort_includes {
         eprintln!("This sort_includes option is not implemented yet...");
         todo!();
     }
@@ -39,7 +39,7 @@ fn main() {
         eprintln!("This cursor option is not implemented yet...");
         todo!();
     }
-    if args.dump_config == true {
+    if args.dump_config {
         eprintln!("This dump_config option is not implemented yet...");
         todo!();
     }
