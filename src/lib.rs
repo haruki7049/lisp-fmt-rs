@@ -7,21 +7,24 @@ impl Formatter {
         self.code
     }
 
-    /// is_sexp returns true if line's first charactor is left bracket.
-    /// ```
-    /// assert!(is_sexp(String::from("(print 'Alice')")))
-    /// assert!(!is_sexp(String::from("print 'This line is missing a left bracket')")))
-    /// assert!(!is_sexp(String::from("# This is emacs-lisp's comment")))
-    /// assert!(!is_sexp(String::from(";; This is commonlisp's comment")))
-    /// ```
-    fn is_sexp(line: String) -> bool {
-        todo!()
-    }
-
     pub fn new(code: String, _args: FormatterArguments) -> Self {
         Formatter { code }
     }
 }
+
+/// is_sexp function returns true if line's first charactor is left bracket.
+/// ```
+/// use lisp_fmt_rs::is_sexp;
+///
+/// assert!(is_sexp(String::from("(print 'Alice')")));
+/// assert!(!is_sexp(String::from("print 'This line is missing a left bracket')")));
+/// assert!(!is_sexp(String::from("# This is emacs-lisp's comment")));
+/// assert!(!is_sexp(String::from(";; This is commonlisp's comment")));
+/// ```
+pub fn is_sexp(line: String) -> bool {
+    todo!()
+}
+
 
 struct FormatterArguments {}
 
