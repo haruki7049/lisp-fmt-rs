@@ -27,7 +27,7 @@ impl Sexp for String {
     /// assert!(!String::from(";; This is commonlisp's comment").is_sexp());
     /// ```
     fn is_sexp(&self) -> bool {
-        self.chars().next() == Some('(')
+        self.chars().nth(0) == Some('(')
     }
 }
 
