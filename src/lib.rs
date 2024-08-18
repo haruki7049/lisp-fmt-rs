@@ -31,6 +31,21 @@ impl Sexp for String {
     }
 }
 
+impl Sexp for str {
+    /// is_sexp function returns true if line's first charactor is left bracket.
+    /// ```
+    /// use lisp_fmt_rs::Sexp;
+    ///
+    /// assert!("(print 'Alice')".is_sexp());
+    /// assert!(!"print 'This line is missing a left bracket')".is_sexp());
+    /// assert!(!"# This is emacs-lisp's comment".is_sexp());
+    /// assert!(!";; This is commonlisp's comment".is_sexp());
+    /// ```
+    fn is_sexp(&self) -> bool {
+        self.chars().nth(0) == Some('(')
+    }
+}
+
 struct FormatterArguments {}
 
 impl FormatterArguments {
@@ -41,7 +56,6 @@ impl FormatterArguments {
 
 #[cfg(test)]
 mod tests {
-    use super::Sexp;
     use super::{Formatter, FormatterArguments};
 
     #[test]
