@@ -31,7 +31,6 @@ impl Sexp for String {
     }
 }
 
-
 struct FormatterArguments {}
 
 impl FormatterArguments {
