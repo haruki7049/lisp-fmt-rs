@@ -19,7 +19,7 @@ pub trait Sexp {
 impl Sexp for String {
     /// is_sexp function returns true if line's first charactor is left bracket.
     /// ```
-    /// use lisp_fmt_rs::Sexp;
+    /// use lispfmt_rs::Sexp;
     ///
     /// assert!(String::from("(print 'Alice')").is_sexp());
     /// assert!(!String::from("print 'This line is missing a left bracket')").is_sexp());
@@ -34,7 +34,7 @@ impl Sexp for String {
 impl Sexp for str {
     /// is_sexp function returns true if line's first charactor is left bracket.
     /// ```
-    /// use lisp_fmt_rs::Sexp;
+    /// use lispfmt_rs::Sexp;
     ///
     /// assert!("(print 'Alice')".is_sexp());
     /// assert!(!"print 'This line is missing a left bracket')".is_sexp());
