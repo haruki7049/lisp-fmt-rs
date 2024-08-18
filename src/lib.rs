@@ -1,5 +1,5 @@
 struct Formatter {
-    code: String
+    code: String,
 }
 
 impl Formatter {
@@ -12,8 +12,7 @@ impl Formatter {
     }
 }
 
-struct FormatterArguments {
-}
+struct FormatterArguments {}
 
 impl FormatterArguments {
     fn new() -> Self {
